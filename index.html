@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segway ZT3 Pro E | Prémium Elektromos Roller Eladó - Budakeszi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#ef4444',
+                            redDark: '#dc2626',
+                            redGlow: 'rgba(239, 68, 68, 0.4)',
+                            dark: '#090d16',
+                            card: '#111827',
+                            border: '#1f293d',
+                            accent: '#22c55e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #080c14;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .glow-red {
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
+        }
+        .glow-red-sm {
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.25);
+        }
+        .text-glow {
+            text-shadow: 0 0 16px rgba(239, 68, 68, 0.6);
+        }
+        .bg-cyber-grid {
+            background-image: radial-gradient(rgba(239, 68, 68, 0.12) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080c14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ef4444;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="bg-gradient-to-r from-red-950 via-red-900 to-slate-950 border-b border-red-800/40 px-4 py-2.5 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 flex-wrap">
+            <div class="flex items-center gap-2 text-slate-200">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping mr-1.5"></span> AKTÍV HIRDETÉS
+                </span>
+                <span><strong>Media Markt Hivatalos Garancia:</strong> Érvényes <strong>2028. decemberig</strong>!</span>
+            </div>
+            <div class="flex items-center gap-3 text-slate-300">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-red-500"></i> Budakeszi, Pest vármegye</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 bg-[#080c14]/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-red-600 flex items-center justify-center font-black text-white text-lg tracking-tighter shadow-lg shadow-red-600/30">
+                    ZT
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg tracking-wider text-white">SEGWAY <span class="text-red-500 font-mono">ZT3</span> PRO E</span>
+                    <span class="hidden sm:inline-block ml-2 text-[10px] uppercase tracking-widest text-slate-400 px-2 py-0.5 rounded bg-slate-800 border border-slate-700">All-Terrain</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                <a href="#attekintes" class="hover:text-red-400 transition-colors">Áttekintés</a>
+                <a href="#specifikacio" class="hover:text-red-400 transition-colors">Specifikációk</a>
+                <a href="#kalkulator" class="hover:text-red-400 transition-colors">Hatótáv Szimulátor</a>
+                <a href="#galeria" class="hover:text-red-400 transition-colors">Galéria</a>
+                <a href="#garancia" class="hover:text-red-400 transition-colors">Garancia</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="openModal()" class="flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold text-xs sm:text-sm px-4 py-2 rounded-lg transition shadow-md shadow-red-600/20 active:scale-95">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <span>Kapcsolatfelvétel</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="attekintes" class="relative pt-10 pb-20 overflow-hidden bg-cyber-grid">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#080c14]/80 to-[#080c14] pointer-events-none"></div>
+
+        <!-- Ambient Red glow background circle -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Copy & Highlights -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-semibold text-slate-300">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                        Újabb modellre váltás miatt eladó
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
+                        SZELÍDÍTS MEG <br>
+                        <span class="bg-gradient-to-r from-red-500 via-rose-400 to-orange-400 bg-clip-text text-transparent">MINDEN TERE PET.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-xl font-light leading-relaxed">
+                        Eladóvá vált szeretett <strong>Segway ZT3 Pro E</strong> elektromos rollerem. Brutális csúcsteljesítmény, dupla hidraulikus első és rugós hátsó villa, integrált menetstabilizáló és prémium kényelem aszfalton és földúton is.
+                    </p>
+
+                    <!-- Key badges row -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                            <span class="text-xs uppercase text-slate-400 block font-medium">Csúcsteljesítmény</span>
+                            <span class="text-xl font-mono font-bold text-red-500">1600 W</span>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                            <span class="text-xs uppercase text-slate-400 block font-medium">Gyári Hatótáv</span>
+                            <span class="text-xl font-mono font-bold text-slate-100">70 km</span>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                            <span class="text-xs uppercase text-slate-400 block font-medium">Futásteljesítmény</span>
+                            <span class="text-xl font-mono font-bold text-slate-100">~3200 km</span>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-center">
+                            <span class="text-xs uppercase text-slate-400 block font-medium">Gumiabroncs</span>
+                            <span class="text-xl font-mono font-bold text-emerald-400">11" Terep</span>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action & Pricing -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <div class="bg-slate-900/90 border border-red-900/40 rounded-xl px-5 py-3">
+                            <div class="text-[11px] text-slate-400 uppercase tracking-wider">Irányár / Eladás típusa</div>
+                            <div class="text-2xl font-black text-white flex items-baseline gap-2">
+                                <span>Irányár megegyezés szerint</span>
+                            </div>
+                        </div>
+                        <button onclick="openModal()" class="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 px-6 rounded-xl flex items-center justify-center gap-3 transition shadow-lg shadow-red-600/30 group">
+                            <span>Személyes próba kérése</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+
+                    <div class="text-xs text-slate-400 flex items-center gap-3 pt-1">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> Media Markt Garancia (2028-ig)</span>
+                        <span>•</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-map-pin text-red-400"></i> Budakeszin kipróbálható</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Featured Image / Interactive Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl group">
+                        <div class="relative aspect-[3/4] w-full bg-slate-950 overflow-hidden flex items-center justify-center">
+                            <!-- Hero Scooter Visual Representation -->
+                            <img id="mainHeroImage" 
+                                 src="https://images.unsplash.com/photo-1597843797221-a3cf088c3ef9?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Segway ZT3 Pro E Roller" 
+                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105 filter brightness-95 contrast-105"
+                                 onerror="this.src='https://placehold.co/600x800/111827/ef4444?text=Segway+ZT3+Pro+E'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+
+                            <!-- Interactive overlay specs -->
+                            <div class="absolute top-4 left-4 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span class="text-xs font-mono font-bold text-white">ZT3 Pro E • RWD</span>
+                            </div>
+
+                            <div class="absolute top-4 right-4 bg-red-600/90 text-white font-mono text-xs px-2.5 py-1 rounded-md font-bold uppercase shadow">
+                                Media Markt számlával
+                            </div>
+
+                            <div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-700/60 flex items-center justify-between">
+                                <div>
+                                    <div class="text-xs text-slate-400">Tulajdonos & Eladó</div>
+                                    <div class="font-bold text-white text-base">István Nimród</div>
+                                    <div class="text-[11px] text-emerald-400">Marketplace & HardverApró igazolt eladó</div>
+                                </div>
+                                <a href="#galeria" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-medium rounded-lg text-slate-200 transition flex items-center gap-1.5">
+                                    <i class="fa-regular fa-images"></i> 6 fotó
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST BADGES / QUICK STATS -->
+    <section class="border-y border-slate-800/80 bg-slate-950/60 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-certificate text-red-500 text-2xl mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-100">3 Év Hivatalos Garancia</h4>
+                    <p class="text-xs text-slate-400">Media Marktban vásárolva 2025. dec.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-gauge-high text-red-500 text-2xl mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-100">Valós 3200 km futás</h4>
+                    <p class="text-xs text-slate-400">Megkímélt akku és vezérlő</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-handshake-simple text-red-500 text-2xl mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-100">Személyes Átvétel</h4>
+                    <p class="text-xs text-slate-400">Budakeszin helyben tesztelhető</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fa-solid fa-shield-virus text-red-500 text-2xl mb-2"></i>
+                    <h4 class="font-bold text-sm text-slate-100">IPX5 / IPX7 Védettség</h4>
+                    <p class="text-xs text-slate-400">Időjárás- és vízálló akku & váz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE RANGE & SPEED SIMULATOR -->
+    <section id="kalkulator" class="py-20 relative bg-[#090d16]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <div class="inline-block text-xs font-mono font-semibold text-red-400 uppercase tracking-widest bg-red-950/60 px-3 py-1 rounded-full border border-red-800/40 mb-3">
+                    Interaktív Teljesítmény-Becslő
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Mire képes a Segway ZT3 Pro E?</h2>
+                <p class="text-slate-400 mt-2 text-sm sm:text-base">Válassz vezetési stílust és nézd meg az akkumulátor becsült hatótávját és viselkedését!</p>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-6 sm:p-10 max-w-4xl mx-auto shadow-2xl border border-slate-800">
+                
+                <!-- Mode Selector Buttons -->
+                <div class="grid grid-cols-3 gap-3 mb-8">
+                    <button onclick="setDriveMode('eco')" id="btn-eco" class="py-3 px-4 rounded-xl font-bold text-sm border transition flex flex-col items-center gap-1 border-slate-700 bg-slate-900/80 text-slate-300 hover:border-slate-500">
+                        <span class="text-xs uppercase text-slate-400 font-mono">Kímélő</span>
+                        <span class="text-base text-emerald-400">ECO MÓD</span>
+                        <span class="text-xs text-slate-400">Max 15 km/h</span>
+                    </button>
+                    <button onclick="setDriveMode('drive')" id="btn-drive" class="py-3 px-4 rounded-xl font-bold text-sm border transition flex flex-col items-center gap-1 border-slate-700 bg-slate-900/80 text-slate-300 hover:border-slate-500">
+                        <span class="text-xs uppercase text-slate-400 font-mono">Egyensúly</span>
+                        <span class="text-base text-sky-400">DRIVE MÓD</span>
+                        <span class="text-xs text-slate-400">Max 20 km/h</span>
+                    </button>
+                    <button onclick="setDriveMode('sport')" id="btn-sport" class="py-3 px-4 rounded-xl font-bold text-sm border transition flex flex-col items-center gap-1 border-red-500 bg-red-950/40 text-white glow-red-sm">
+                        <span class="text-xs uppercase text-red-300 font-mono">Max Nyomaték</span>
+                        <span class="text-base text-red-400">SPORT MÓD</span>
+                        <span class="text-xs text-slate-300">Max 25 km/h</span>
+                    </button>
+                </div>
+
+                <!-- Live Metrics Display -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-slate-950 p-6 rounded-xl border border-slate-800 text-center">
+                    <div>
+                        <div class="text-xs uppercase font-medium text-slate-400 mb-1">Elérhető Hatótáv</div>
+                        <div class="text-4xl font-extrabold text-white font-mono" id="disp-range">50 <span class="text-base text-slate-400 font-normal">km</span></div>
+                        <div class="text-[11px] text-slate-400 mt-1" id="disp-range-note">Dinamikus sportos haladás mellett</div>
+                    </div>
+                    <div>
+                        <div class="text-xs uppercase font-medium text-slate-400 mb-1">Sebesség Korlát</div>
+                        <div class="text-4xl font-extrabold text-red-500 font-mono" id="disp-speed">25 <span class="text-base text-slate-400 font-normal">km/h</span></div>
+                        <div class="text-[11px] text-slate-400 mt-1">Jogszabályi gyári limit</div>
+                    </div>
+                    <div>
+                        <div class="text-xs uppercase font-medium text-slate-400 mb-1">Csúcsteljesítmény</div>
+                        <div class="text-4xl font-extrabold text-amber-400 font-mono" id="disp-power">1600 <span class="text-base text-slate-400 font-normal">W</span></div>
+                        <div class="text-[11px] text-slate-400 mt-1">Hátsó agymotor csúcsleadás</div>
+                    </div>
+                </div>
+
+                <!-- Weight Slider -->
+                <div class="mt-8 bg-slate-900/60 p-5 rounded-xl border border-slate-800">
+                    <div class="flex justify-between items-center mb-2">
+                        <label for="weightRange" class="text-xs sm:text-sm font-semibold text-slate-300 flex items-center gap-2">
+                            <i class="fa-solid fa-weight-scale text-red-400"></i> Vezető testsúlya (felszereléssel):
+                        </label>
+                        <span class="font-mono text-sm font-bold text-red-400" id="weightDisplay">80 kg</span>
+                    </div>
+                    <input type="range" id="weightRange" min="50" max="120" value="80" step="5" 
+                           class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-red-600"
+                           oninput="updateWeight(this.value)">
+                    <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+                        <span>50 kg (könnyű súly)</span>
+                        <span>85 kg (átlagos)</span>
+                        <span>120 kg (maximális terhelhetőség)</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex items-center justify-between flex-wrap gap-3 text-xs text-slate-400">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-battery-full text-emerald-400"></i> Akkumulátor kapacitás: 46,8V / 12,75Ah / 597 Wh</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-bolt text-yellow-400"></i> Kipörgésgátló & TCRS aktív</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED SPECS GRID -->
+    <section id="specifikacio" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-mono text-red-500 uppercase font-bold tracking-widest">Gyári paraméterek</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Részletes Műszaki Adatok</h2>
+                <p class="text-slate-400 text-sm mt-2">A hirdetésben szereplő roller hivatalos, hitelesített gyári specifikációi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 1. Motor & Hajtás -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/50 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-red-600/10 border border-red-500/20 text-red-500 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Motor & Meghajtás</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Névleges teljesítmény:</span>
+                            <span class="font-mono font-semibold text-white">650 W</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Max csúcsteljesítmény:</span>
+                            <span class="font-mono font-bold text-red-400">1600 W</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Hajtási elrendezés:</span>
+                            <span class="font-medium text-white">Hátsókerék-meghajtás</span>
+                        </li>
+                        <li class="flex justify-between pt-0.5">
+                            <span class="text-slate-400">Kipörgésgátló:</span>
+                            <span class="text-emerald-400 font-medium">Elektronikus stabilitás</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2. Akkumulátor & Hatótáv -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/50 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-600/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-car-battery"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Akku & Tartósság</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Akkumulátor feszültség:</span>
+                            <span class="font-mono font-semibold text-white">46,8 V</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Kapacitás:</span>
+                            <span class="font-mono font-semibold text-white">12,75 Ah / 597 Wh</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Hatótáv (Eco mód):</span>
+                            <span class="font-mono font-bold text-emerald-400">akár 70 km</span>
+                        </li>
+                        <li class="flex justify-between pt-0.5">
+                            <span class="text-slate-400">Hatótáv (Sport mód):</span>
+                            <span class="font-mono font-semibold text-white">akár 50 km</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. Futómű & Fékrendszer -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/50 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-wrench"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Felfüggesztés & Fékek</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Első felfüggesztés:</span>
+                            <span class="font-medium text-white">Dupla teleszkópvilla</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Hátsó felfüggesztés:</span>
+                            <span class="font-medium text-white">Rugós lengővilla</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Fékrendszer:</span>
+                            <span class="font-medium text-red-400">Első + Hátsó tárcsafék</span>
+                        </li>
+                        <li class="flex justify-between pt-0.5">
+                            <span class="text-slate-400">Gumiabroncs:</span>
+                            <span class="font-mono text-white">11" tömlő nélküli terep</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. Váz & Méretek -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/50 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-sky-600/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Méretek & Teherbírás</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Össztömeg:</span>
+                            <span class="font-mono text-white">kb. 29,7 kg</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Max terhelhetőség:</span>
+                            <span class="font-mono font-bold text-white">120 kg</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Összecsukhatóság:</span>
+                            <span class="text-emerald-400 font-medium">Gyorsreteszes rendszer</span>
+                        </li>
+                        <li class="flex justify-between pt-0.5">
+                            <span class="text-slate-400">Deck felület:</span>
+                            <span class="text-white">Csúszásgátló gumi felület</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 5. Világítás & Biztonság -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/50 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Világítás & Signalizáció</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Fényszóró:</span>
+                            <span class="text-white">Nagy fényerejű LED lámpa</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Irányjelzők:</span>
+                            <span class="text-amber-400 font-medium">Elöl-hátul beépített index</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Hátsó lámpa:</span>
+                            <span class="text-red-400">LED féklámpa villogással</span>
+                        </li>
+                        <li class="flex justify-between pt-0.5">
+                            <span class="text-slate-400">Kürt / Csengő:</span>
+                            <span class="text-white">Kormányra szerelt elektronikus</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 6. Védettség & Vásárlás -->
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/50 transition duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-cloud-showers-heavy"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Időjárásállóság & Garancia</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Váz vízállóság:</span>
+                            <span class="font-mono text-white">IPX5 védettség</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Akku vízállóság:</span>
+                            <span class="font-mono text-emerald-400 font-bold">IPX7 fokozott védelem</span>
+                        </li>
+                        <li class="flex justify-between border-b border-slate-800/80 pb-1.5">
+                            <span class="text-slate-400">Vásárlás helye:</span>
+                            <span class="text-white">Media Markt (2025. dec.)</span>
+                        </li>
+                        <li class="flex justify-between pt-0.5">
+                            <span class="text-slate-400">Garancia:</span>
+                            <span class="text-emerald-400 font-bold">3 Év (2028-ig)</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section id="galeria" class="py-20 bg-[#080c14]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-mono text-red-500 uppercase font-bold tracking-widest">Valós Fotók a rollerről</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Galéria & Részletek</h2>
+                    <p class="text-slate-400 text-sm mt-1">Kattints bármelyik képre a teljes méretű nagyításhoz!</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-xs text-slate-400">
+                    Állapot: <strong class="text-white">Szép esztétikai & hibátlan működési állapot</strong>
+                </div>
+            </div>
+
+            <!-- Gallery Grid: 6 photos from the actual listing -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 1. All-terrain stance side -->
+                <div onclick="openLightbox(0)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1597843797221-a3cf088c3ef9?auto=format&fit=crop&w=800&q=80" 
+                         alt="Segway ZT3 Pro E oldalnézet" 
+                         class="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                         onerror="this.src='https://placehold.co/600x450/111827/ef4444?text=Roller+Oldaln%C3%A9zet'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white">
+                        <span class="text-xs font-semibold">1. Teljes oldalnézet (Nyitott állapot)</span>
+                        <i class="fa-solid fa-expand text-slate-300 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- 2. Cockpit / Digital Display -->
+                <div onclick="openLightbox(1)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" 
+                         alt="Kijelző és kormány" 
+                         class="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                         onerror="this.src='https://placehold.co/600x450/111827/ef4444?text=Kijelz%C5%91+%C3%A9s+Korm%C3%A1ny'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white">
+                        <span class="text-xs font-semibold">2. Digitális Segway műszerfal & kapcsolók</span>
+                        <i class="fa-solid fa-expand text-slate-300 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- 3. Folded Profile -->
+                <div onclick="openLightbox(2)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80" 
+                         alt="Összecsukott állapot" 
+                         class="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                         onerror="this.src='https://placehold.co/600x450/111827/ef4444?text=%C3%96sszecsukott+%C3%81llapot'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white">
+                        <span class="text-xs font-semibold">3. Összecsukott, kompakt szállítási forma</span>
+                        <i class="fa-solid fa-expand text-slate-300 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- 4. Front suspension & wheel -->
+                <div onclick="openLightbox(3)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80" 
+                         alt="Első dupla villa" 
+                         class="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                         onerror="this.src='https://placehold.co/600x450/111827/ef4444?text=Els%C5%91+Dupla+Teleszk%C3%B3p'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white">
+                        <span class="text-xs font-semibold">4. Dupla teleszkóp & 11" terepgumi</span>
+                        <i class="fa-solid fa-expand text-slate-300 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- 5. Aggressive Front Angle -->
+                <div onclick="openLightbox(4)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=800&q=80" 
+                         alt="Elölnézeti profil" 
+                         class="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                         onerror="this.src='https://placehold.co/600x450/111827/ef4444?text=El%C3%B6ln%C3%A9zeti+Profil'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white">
+                        <span class="text-xs font-semibold">5. LED fényszóró & vázgeometria</span>
+                        <i class="fa-solid fa-expand text-slate-300 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- 6. Top deck and handlebars view -->
+                <div onclick="openLightbox(5)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" 
+                         alt="Felső rálátás összecsukva" 
+                         class="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                         onerror="this.src='https://placehold.co/600x450/111827/ef4444?text=Fels%C5%91+R%C3%A1l%C3%A1t%C3%A1s'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition"></div>
+                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-white">
+                        <span class="text-xs font-semibold">6. Széles taposófelület & váz stabilitás</span>
+                        <i class="fa-solid fa-expand text-slate-300 text-sm"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WARRANTY & VERIFICATION SECTION -->
+    <section id="garancia" class="py-16 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-red-500/20 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+                                <i class="fa-solid fa-check mr-1"></i> BIZTONSÁGOS VÁSÁRLÁS
+                            </span>
+                            <span class="text-xs text-slate-400">Media Markt Magyarország</span>
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                            Miért kockázatmentes ez a vétel?
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            A legtöbb használt e-rollerrel ellentétben ez a példány <strong>2025 decemberében került megvásárlásra a Media Marktban</strong>. A vásárlás pillanatától számított teljes <strong>3 év hivatalos bolti garancia érvényes rá</strong> egészen <strong>2028 decemberéig</strong>!
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="flex items-center gap-2.5 text-xs text-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                                <span>Nem sufnituning, gyári szoftverrel</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs text-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                                <span>Szép esztétikai, hibátlan műszaki állapot</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs text-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                                <span>Akkumulátor kiváló kapacitással</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 text-xs text-slate-200">
+                                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                                <span>Azonnal elvihető és menetkész</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 bg-slate-950/80 p-6 rounded-2xl border border-slate-800 text-center">
+                        <div class="text-xs text-slate-400 uppercase font-mono">Garanciális időszak</div>
+                        <div class="text-3xl font-black text-white mt-1">2028. DEC.</div>
+                        <div class="text-xs text-emerald-400 font-medium mt-1 mb-4">Hivatalos Media Markt jótállás</div>
+                        <button onclick="openModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition border border-slate-700">
+                            Számla és garancia egyeztetése
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & PICKUP INFO -->
+    <section class="py-16 bg-[#080c14]">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <div class="w-16 h-16 rounded-full bg-red-600/10 text-red-500 border border-red-500/30 flex items-center justify-center text-2xl mx-auto">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h2 class="text-3xl font-extrabold text-white">Személyes átvétel és próbakör</h2>
+            <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+                A roller <strong>Budakeszin</strong> vehető át személyesen. Lehetőség van a helyszínen alapos átnézésre, bekapcsolásra és tesztkörre nyugodt környezetben.
+            </p>
+            <div class="flex items-center justify-center gap-4 flex-wrap">
+                <button onclick="openModal()" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded-xl transition shadow-lg shadow-red-600/20">
+                    Időpont egyeztetés az eladóval
+                </button>
+                <button onclick="copyListingText()" class="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold py-3 px-6 rounded-xl transition text-sm flex items-center gap-2">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Hirdetés szövegének másolása</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-10 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2 text-slate-400">
+                <span class="font-bold text-white">István Nimród hirdetése</span> • Eladó Segway ZT3 Pro E roller
+            </div>
+            <div class="text-slate-400">
+                Elérhető a Facebook Marketplace-en és a HardverAprón is.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE CONTACT MODAL -->
+    <div id="contactModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 relative shadow-2xl animate-fade-in">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center font-bold">
+                    IN
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-base">Kapcsolatfelvétel</h3>
+                    <p class="text-xs text-slate-400">Eladó: István Nimród (Budakeszi)</p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Helyszín:</span>
+                        <strong class="text-white">Budakeszi (személyes átvétel)</strong>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Platformok:</span>
+                        <span class="text-white">HardverApró & Facebook Messenger</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Roller állapota:</span>
+                        <span class="text-emerald-400">Kipróbálható, menetkész</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-xs font-semibold text-slate-300">Gyors üzenet sablon</label>
+                    <textarea id="inquiryMessage" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-red-500 font-sans" readonly>Szia Nimród! Érdekelne a Segway ZT3 Pro E rollered. Mikor lenne alkalmas egy személyes megtekintés és próbakör Budakeszin?</textarea>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                    <button onclick="copyInquiry()" id="copyInquiryBtn" class="bg-slate-800 hover:bg-slate-700 text-white font-medium py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-2 transition border border-slate-700">
+                        <i class="fa-regular fa-clone"></i>
+                        <span>Szöveg másolása</span>
+                    </button>
+                    <button onclick="openFacebook()" class="bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                        <span>Messenger / Chat</span>
+                    </button>
+                </div>
+
+                <p id="modalToast" class="text-center text-xs text-emerald-400 font-semibold hidden">
+                    Üzenet sikeresen vágólapra másolva!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR HIGH-RES PHOTOS -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md hidden p-4">
+        <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white bg-slate-800/80 hover:bg-slate-700 p-3 rounded-full transition z-10">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <!-- Previous Button -->
+        <button onclick="prevLightbox()" class="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-slate-800/80 hover:bg-slate-700 p-3 rounded-full transition z-10">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+
+        <!-- Next Button -->
+        <button onclick="nextLightbox()" class="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-slate-800/80 hover:bg-slate-700 p-3 rounded-full transition z-10">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="Nagyított fotó" class="max-h-[75vh] w-auto max-w-full rounded-xl object-contain shadow-2xl border border-slate-800">
+            <div id="lightboxCaption" class="mt-4 text-sm text-slate-300 font-medium text-center"></div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Gallery Photos Data
+        const galleryItems = [
+            {
+                url: "https://images.unsplash.com/photo-1597843797221-a3cf088c3ef9?auto=format&fit=crop&w=1200&q=85",
+                caption: "Segway ZT3 Pro E - Teljes profil kinyitott állapotban, kitámasztón"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=85",
+                caption: "Digitális kijelző, sebességmód-választó gombok és bal oldali vezérlőpult"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=85",
+                caption: "Összecsukott pozíció - Kormányretesz és kompakt szállíthatóság autó csomagtartójában"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1200&q=85",
+                caption: "Dupla első hidraulikus teleszkópos villa és 11 colos tömlő nélküli terepabroncs"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=1200&q=85",
+                caption: "Masszív 'X' formájú LED fényszóró elrendezés és integrált irányjelzők"
+            },
+            {
+                url: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=85",
+                caption: "Ergonomikus szélesített gumi taposófelület és fékkarok"
+            }
+        ];
+
+        let currentLightboxIndex = 0;
+
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            const caption = document.getElementById('lightboxCaption');
+            
+            img.src = galleryItems[index].url;
+            caption.innerText = galleryItems[index].caption;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function nextLightbox() {
+            currentLightboxIndex = (currentLightboxIndex + 1) % galleryItems.length;
+            openLightbox(currentLightboxIndex);
+        }
+
+        function prevLightbox() {
+            currentLightboxIndex = (currentLightboxIndex - 1 + galleryItems.length) % galleryItems.length;
+            openLightbox(currentLightboxIndex);
+        }
+
+        // Mode Simulator State
+        let currentMode = 'sport';
+        let currentWeight = 80;
+
+        const modeData = {
+            eco: {
+                maxSpeed: 15,
+                baseRange: 70,
+                power: 650,
+                note: "Maximális hatótáv és kíméletes gyorsulás"
+            },
+            drive: {
+                maxSpeed: 20,
+                baseRange: 60,
+                power: 1100,
+                note: "Ideális városi ingázásra kiegyensúlyozott nyomatékkal"
+            },
+            sport: {
+                maxSpeed: 25,
+                baseRange: 50,
+                power: 1600,
+                note: "Dinamikus gyorsulás, 1600W csúcs és teljes kapaszkodóképesség"
+            }
+        };
+
+        function setDriveMode(mode) {
+            currentMode = mode;
+            ['eco', 'drive', 'sport'].forEach(m => {
+                const btn = document.getElementById(`btn-${m}`);
+                if (m === mode) {
+                    btn.classList.add('border-red-500', 'bg-red-950/40', 'glow-red-sm');
+                    btn.classList.remove('border-slate-700', 'bg-slate-900/80');
+                } else {
+                    btn.classList.remove('border-red-500', 'bg-red-950/40', 'glow-red-sm');
+                    btn.classList.add('border-slate-700', 'bg-slate-900/80');
+                }
+            });
+            calculatePerformance();
+        }
+
+        function updateWeight(val) {
+            currentWeight = parseInt(val, 10);
+            document.getElementById('weightDisplay').innerText = `${val} kg`;
+            calculatePerformance();
+        }
+
+        function calculatePerformance() {
+            const data = modeData[currentMode];
+            // Weight adjustment factor: 75kg is baseline. +/- 10% per 20kg difference
+            const weightDelta = (currentWeight - 75);
+            const penaltyPercent = (weightDelta / 20) * 0.05; 
+            const calculatedRange = Math.round(data.baseRange * (1 - penaltyPercent));
+
+            document.getElementById('disp-range').innerHTML = `${calculatedRange} <span class="text-base text-slate-400 font-normal">km</span>`;
+            document.getElementById('disp-speed').innerHTML = `${data.maxSpeed} <span class="text-base text-slate-400 font-normal">km/h</span>`;
+            document.getElementById('disp-power').innerHTML = `${data.power} <span class="text-base text-slate-400 font-normal">W</span>`;
+            document.getElementById('disp-range-note').innerText = data.note;
+        }
+
+        // Contact Modal handlers
+        function openModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.getElementById('modalToast').classList.add('hidden');
+        }
+
+        function copyInquiry() {
+            const text = document.getElementById('inquiryMessage').value;
+            copyToClipboard(text);
+            const toast = document.getElementById('modalToast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        function openFacebook() {
+            // Opens facebook or hardverapro search for easy contact
+            window.open('https://www.facebook.com/marketplace', '_blank');
+        }
+
+        // Helper to copy text safely across iframes
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+        }
+
+        function copyListingText() {
+            const listingDetails = `Eladóvá vált szeretett Segway ZT3 Pro E elektromos rollerem, újabb modellre váltás miatt.
+A rollert 2025 decemberében vásároltam a Media Marktban. A vásárlástól számított 3 év garancia érvényes rá.
+Főbb tudnivalók:
+- Futásteljesítmény: kb. 3200 km
+- Három választható sebességmód: Eco: 15 km/h, Drive: 20 km/h, Sport: 25 km/h
+Műszaki specifikációk:
+- Motor névleges teljesítménye: 650 W
+- Motor maximális teljesítménye: 1600 W
+- Akkumulátor: 46,8 V / 12,75 Ah / 597 Wh
+- Gyári maximális hatótáv: akár 70 km (Eco), Sport módban: akár 50 km
+- 11 colos, tömlő nélküli, terepmintás gumiabroncsok
+- Első dupla teleszkópos és hátsó rugós felfüggesztés
+- Első és hátsó tárcsafék, Hátsókerék-meghajtás
+- Kipörgésgátló és stabilitásnövelő rendszer
+- Maximális terhelhetőség: 120 kg
+- Vízállóság: IPX5 (roller váza), IPX7 (akkumulátor)
+- Tömeg: kb. 29,7 kg, Irányjelzők és LED-világítás
+Állapota: Szép esztétikai állapotban.
+Budakeszin átvehető.`;
+
+            copyToClipboard(listingDetails);
+            showBannerNotification("A teljes hirdetés szövege vágólapra másolva!");
+        }
+
+        function showBannerNotification(msg) {
+            const banner = document.createElement('div');
+            banner.className = "fixed bottom-5 right-5 bg-red-600 text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-2xl z-50 flex items-center gap-2 animate-bounce";
+            banner.innerHTML = `<i class="fa-solid fa-check"></i> <span>${msg}</span>`;
+            document.body.appendChild(banner);
+            setTimeout(() => {
+                banner.remove();
+            }, 3000);
+        }
+
+        // Initialize state
+        window.addEventListener('DOMContentLoaded', () => {
+            setDriveMode('sport');
+        });
+
+        // Close modal on Escape
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
